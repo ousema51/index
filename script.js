@@ -9,7 +9,7 @@ const outputCard = document.getElementById("output-card");
 const outputProblem = document.getElementById("output-problem");
 const outputSteps = document.getElementById("output-steps");
 const outputAnswer = document.getElementById("output-answer");
-
+const API_URL = "https://your-backend-name.onrender.com/solve";
 // ==========================
 // State
 // ==========================
@@ -48,16 +48,11 @@ solveBtn.addEventListener("click", async () => {
   outputAnswer.textContent = "";
 
   try {
-    const response = await fetch("http://127.0.0.1:5000/solve", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        mode: selectedMode,
-        problem: problem
-      })
-    });
+    const response = await fetch(API_URL, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ mode: selectedMode, problem: problem })
+});
 
     // Always parse JSON (even on errors)
     const data = await response.json();

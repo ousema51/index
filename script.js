@@ -9,7 +9,7 @@ const outputCard = document.getElementById("output-card");
 const outputProblem = document.getElementById("output-problem");
 const outputSteps = document.getElementById("output-steps");
 const outputAnswer = document.getElementById("output-answer");
-const API_URL = "https://calculator-kknt.onrender.com";
+const API_URL = "https://calculator-kknt.onrender.com/solve";
 // ==========================
 // State
 // ==========================

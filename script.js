@@ -9,7 +9,7 @@ const outputCard = document.getElementById("output-card");
 const outputProblem = document.getElementById("output-problem");
 const outputSteps = document.getElementById("output-steps");
 const outputAnswer = document.getElementById("output-answer");
-const API_URL = "calculator-one-peach-61.vercel.app/solve";
+const API_URL = "https://calculator-one-peach-61.vercel.app/solve";
 // ==========================
 // State
 // ==========================

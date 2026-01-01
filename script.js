@@ -51,8 +51,13 @@ solveBtn.addEventListener("click", async () => {
     const response = await fetch(API_URL, {
   method: "POST",
   headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ mode: selectedMode, problem: problem })
+  body: JSON.stringify({
+    mode: selectedMode,
+    problem: problem,
+    limitPoint: limitPoint
+  })
 });
+
 
     // Always parse JSON (even on errors)
     const data = await response.json();
